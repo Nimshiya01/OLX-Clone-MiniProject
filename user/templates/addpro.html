@@ -1,0 +1,12 @@
+{%extends 'base.html' %}
+
+{%block contents%}
+
+<div class="addpro" >
+  <form method="post" enctype="multipart/form-data">
+      {%csrf_token%}
+       {{form}}
+       <input type="submit">
+  </form>
+</div>
+{%endblock%}

@@ -1,0 +1,24 @@
+
+
+{% extends 'base.html'%}
+
+{% block contents%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/collection.css'%}">
+<div class="coll">
+    {%for i in collection%}
+
+    <div class="collection-card">
+        <a href="{% url 'cldet' i.id%}">
+        <p>{{i.name}}</p>
+        <div class="card-image">
+            <img src="/olxclone/{{i.image}}">
+           
+        </div>
+        </a>
+    </div>
+    {%endfor%}
+
+</div>
+{%endblock%}
+<p>{{collection}}</p>

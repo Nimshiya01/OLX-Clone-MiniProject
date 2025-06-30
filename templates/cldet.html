@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block contents %}
+
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/cldet.css'%}">
+
+
+<div class="gallery-container">
+    
+   
+    
+    <img class="gallery" style="height:500px;" src="/olxclone/{{collection.image}} ">
+ 
+   
+</div>
+
+<h2>{{collection.name}}</h2>
+<h4>Price :{{collection.price}}</h4>
+<br>
+<h5>Description :{{collection.description}}</h5>
+
+<p>Contact_info :{{collection.contact_info}}</p>
+<p>User :{{collection.user}}</p>
+<p>Created_at :{{collection.created_at}}</p>
+{%endblock%}

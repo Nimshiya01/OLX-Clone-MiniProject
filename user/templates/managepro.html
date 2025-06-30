@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" href="/static/css/managepro.css">
+<div class="manage">
+<p>manage products</p>
+
+<a href="{% url 'addpro' %}">
+    <button class="tbutn">Add Products</button>
+</a>
+<br>
+<br>
+<table>
+    <tr>
+        <td>Products</td>
+        <td>View</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    
+    {%for i in pro%}
+    <tr>
+        <td>{{i.name}}</td>
+        <td><a href="{% url 'pdet' i.id %}">View</a></td>
+        <td><a href="{% url 'pedit' i.id%}"> Edit</a></td>
+        <td><a href="{% url 'pdel' i.id%}">Delete</a></td>
+    </tr>
+     {%endfor%}   
+</table>
+</div>
